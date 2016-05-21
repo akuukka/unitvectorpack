@@ -44,8 +44,8 @@ IntegerType packUnitVector(VectorType v) {
 	constexpr size_t XRange = (1<<XBitCount) - 1;
 	constexpr size_t YRange = (1<<(XBitCount-1)) - 1;
 	
-	IntegerType ix = ( ((FloatType)(XRange-1))*v.x );
-	IntegerType iy = ( ((FloatType)(XRange-1))*v.y );
+	IntegerType ix = ( ((FloatType)(XRange-1))*v.x + 0.49f);
+	IntegerType iy = ( ((FloatType)(XRange-1))*v.y + 0.49f);
 	
 	assert(ix <= XRange);
 	assert(iy <= XRange);
